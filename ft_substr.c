@@ -6,7 +6,7 @@
 /*   By: eebert <eebert@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:05:30 by eebert            #+#    #+#             */
-/*   Updated: 2024/09/25 15:05:32 by eebert           ###   ########.fr       */
+/*   Updated: 2024/09/25 15:53:56 by eebert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
-	size_t	i;
-	int		len_s;
+	char			*sub;
+	size_t			i;
+	unsigned int	len_s;
 
 	len_s = ft_strlen(s);
 	if (!s)
