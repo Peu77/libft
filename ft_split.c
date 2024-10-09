@@ -59,6 +59,13 @@ static char	*allocate_word(const char *str, char charset)
 	return (word);
 }
 
+void free_list(char **list, int i)
+{
+    while (i--)
+        free(list[i]);
+    free(list);
+}
+
 char	**ft_split(const char *str, char seperator)
 {
 	char	**result;
@@ -78,7 +85,7 @@ char	**ft_split(const char *str, char seperator)
 		{
 			result[i] = allocate_word(str, seperator);
 			if (!result[i])
-				return (0);
+                return (free_list(result, i), NULL);
 			i++;
 			while (*str && !is_separator(*str, seperator))
 				str++;

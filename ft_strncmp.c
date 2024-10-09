@@ -13,8 +13,8 @@
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
-	char			c1;
-	char			c2;
+	unsigned char			c1;
+	unsigned char			c2;
 
 	i = 0;
 	while (i < n)

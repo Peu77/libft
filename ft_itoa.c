@@ -52,6 +52,10 @@ char	*ft_itoa(int n)
 	is_negative = n < 0;
 	num_len = ft_numlen(n);
 	str = ft_calloc(num_len + is_negative + 1, sizeof(char));
+    if (!str)
+    {
+        return (NULL);
+    }
 	if (is_negative)
 	{
 		n = -n;

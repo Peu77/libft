@@ -15,8 +15,12 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*lastd;
-	const char	*lasts = src + len - 1;
+    char	*lasts;
 
+    if(!dst || !src){
+        return (NULL);
+    }
+    lasts = (char *)src + len - 1;
 	if (dst < src)
 		return (ft_memcpy(dst, src, len));
 	lastd = dst + len - 1;
