@@ -6,7 +6,7 @@
 /*   By: eebert <eebert@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:04:31 by eebert            #+#    #+#             */
-/*   Updated: 2024/09/25 15:04:45 by eebert           ###   ########.fr       */
+/*   Updated: 2024/10/14 14:36:57 by eebert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ static char	*allocate_word(const char *str, char charset)
 	return (word);
 }
 
-void free_list(char **list, int i)
+void	free_list(char **list, int i)
 {
-    while (i--)
-        free(list[i]);
-    free(list);
+	while (i--)
+		free(list[i]);
+	free(list);
 }
 
 char	**ft_split(const char *str, char seperator)
@@ -85,7 +85,7 @@ char	**ft_split(const char *str, char seperator)
 		{
 			result[i] = allocate_word(str, seperator);
 			if (!result[i])
-                return (free_list(result, i), NULL);
+				return (free_list(result, i), NULL);
 			i++;
 			while (*str && !is_separator(*str, seperator))
 				str++;
