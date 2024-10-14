@@ -6,15 +6,15 @@
 /*   By: eebert <eebert@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:05:16 by eebert            #+#    #+#             */
-/*   Updated: 2024/09/25 15:05:17 by eebert           ###   ########.fr       */
+/*   Updated: 2024/10/14 14:36:07 by eebert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
-	unsigned char			c1;
-	unsigned char			c2;
+	unsigned char	c1;
+	unsigned char	c2;
 
 	i = 0;
 	while (i < n)
